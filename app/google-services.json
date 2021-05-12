@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "982545815264",
+    "project_id": "nigma-8acba",
+    "storage_bucket": "nigma-8acba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982545815264:android:203ef64610213e4bc1a285",
+        "android_client_info": {
+          "package_name": "com.tony_fire.signupapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982545815264-eg7r2qbtj8aqm8ol7l39djncnfhnt47b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu0tiAr83XqSdmYIHL9B2Kf3q5hJSNuyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982545815264-eg7r2qbtj8aqm8ol7l39djncnfhnt47b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
