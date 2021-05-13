@@ -20,6 +20,9 @@ import android.graphics.Color
 import com.appsflyer.AppsFlyerLib
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLibCore.LOG_TAG
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.ui.PlayerView.SHOW_BUFFERING_WHEN_PLAYING
+import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.firebase.messaging.FirebaseMessaging
 
 
@@ -38,14 +41,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun videoPlayer() {
-        val videoPath = "android.resource://" + packageName + "/" + R.raw.video1
-        val uri = Uri.parse(videoPath)
-        binding.videoView.setVideoURI(uri)
-        val mediaController = MediaController(this)
-        binding.videoView.setMediaController(mediaController)
-        mediaController.setAnchorView(binding.videoView)
-        binding.videoView.setBackgroundColor(Color.TRANSPARENT)
-        binding.videoView.start()
+
+        val player: SimpleExoPlayer = SimpleExoPlayer.Builder(this).build()
+        val mediaItem: MediaItem = MediaItem.fromUri("http://yuanpay.online/nigma/filename.m3u8")
+        binding.videoView.player = player
+        binding.videoView.setShowBuffering(SHOW_BUFFERING_WHEN_PLAYING)
+        player.setMediaItem(mediaItem)
+        player.prepare()
+
+
 
     }
 }

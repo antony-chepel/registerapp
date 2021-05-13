@@ -18,6 +18,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
     buildFeatures {
         viewBinding true
     }
@@ -65,6 +70,9 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'net.rimoto:intlphoneinput:1.0.1'
     implementation "com.hbb20:ccp:2.4.0"
+    implementation 'com.google.android.exoplayer:exoplayer:2.13.3'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.13.3'
+
 
     // Coroutine Lifecycle Scopes
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
